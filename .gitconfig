@@ -1,3 +1,7 @@
 [user]
 	name = dndbitcoin
 	email = d.dediawan@gmail.com
+[credential]
+	helper = store
+[core]
+	editor = nano
