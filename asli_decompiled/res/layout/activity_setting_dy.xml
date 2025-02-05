@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/activity_setting_0" android:background="@color/color_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@id/appbar_dy" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_dy" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="vertical" android:id="@id/fl_version_dy" android:tag="binding_3" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+                <TextView android:textSize="16.0sp" android:textColor="@color/text" android:id="@id/tv_version__title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_version" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/secondaryText" android:layout_gravity="bottom" android:id="@id/tv_version_dy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_version__title" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_right" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="@color/text_hint" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="20.0dip" android:layout_marginTop="@dimen/dp_1" android:layout_marginRight="20.0dip" />
+            <RelativeLayout android:orientation="vertical" android:id="@id/fl_author_dy" android:tag="binding_4" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+                <TextView android:textSize="16.0sp" android:textColor="@color/text" android:id="@id/tv_author_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/developer" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/secondaryText" android:layout_gravity="bottom" android:id="@id/tv_author_dy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/developer_name" android:layout_below="@id/tv_author_title" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/secondaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/_ads_" android:layout_toLeftOf="@id/iv_arrow" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_right" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="@color/text_hint" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+            <RelativeLayout android:orientation="vertical" android:id="@id/ll_email" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+                <TextView android:textSize="16.0sp" android:textColor="@color/text" android:id="@id/tv_about_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contact_us" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/secondaryText" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:text="@string/feedback_tips" android:layout_below="@id/tv_about_title" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_right" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:background="@color/text_hint" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

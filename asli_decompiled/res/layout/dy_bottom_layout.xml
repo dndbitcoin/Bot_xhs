@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_root" android:background="@color/color_bg" android:paddingLeft="@dimen/dp_15" android:paddingTop="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:paddingBottom="@dimen/dp_5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xzdyks.downloader.mob.AdFrameLayout android:id="@id/ad_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar android:layout_gravity="center" android:id="@id/progressWithoutBg" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" app:mlpb_arrow_height="@dimen/dp_6" app:mlpb_arrow_width="@dimen/dp_10" app:mlpb_enable_circle_background="false" app:mlpb_progress_color="@color/text" app:mlpb_progress_stoke_width="@dimen/dp_3" app:mlpb_progress_text_visibility="invisible" app:mlpb_show_arrow="true" />
+            <ImageView android:id="@id/iv_dy_img" android:layout_width="@dimen/dp_120" android:layout_height="@dimen/dp_170" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/text" android:ellipsize="end" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_10" android:maxLines="9" android:lineSpacingExtra="@dimen/dp_2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_all" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+        <Button android:textColor="@color/white" android:id="@id/btn_download_pic" android:background="@drawable/rounded_button_pic" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:text="@string/download_video" android:layout_weight="1.0" />
+        <Space android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.8" />
+        <Button android:textColor="@color/white" android:id="@id/btn_download_video" android:background="@drawable/rounded_button_video" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:text="@string/download_video" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Button android:textColor="@color/white" android:id="@id/btn_download" android:background="@drawable/rounded_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:foreground="?android:selectableItemBackground" android:text="@string/download_video" />
+    <TextView android:textColor="@color/text" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_cancle" android:background="?android:selectableItemBackgroundBorderless" android:padding="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5" android:text="@android:string/cancel" />
+</LinearLayout>

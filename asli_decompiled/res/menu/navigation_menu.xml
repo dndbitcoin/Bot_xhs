@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/menu_icon_share" android:id="@id/menu_share" android:title="@string/menu_share" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/menu_icon_like" android:id="@id/menu_like" android:title="@string/menu_like" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/menu_icon_help" android:id="@id/menu_help" android:title="@string/help_center" />
+    <item android:icon="@drawable/menu_icon_privacy" android:id="@id/menu_privacy" android:title="@string/privacy_text" />
+    <item android:icon="@drawable/menu_ad" android:id="@id/menu_ad_privacy" android:visible="false" android:title="@string/ad_privacy_set" />
+    <item android:icon="@drawable/menu_icon_setting" android:id="@id/menu_setting" android:title="@string/set" app:showAsAction="ifRoom" />
+</menu>

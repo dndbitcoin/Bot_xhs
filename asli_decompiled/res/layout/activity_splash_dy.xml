@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/text" android:id="@id/tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10" android:text="@string/init_str" app:layout_constraintBottom_toTopOf="@id/google_now" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar android:id="@id/google_now" android:visibility="gone" android:layout_width="@dimen/dp_160" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_96" android:indeterminate="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:spb_stroke_separator_length="@dimen/dp_25" style="@style/GNowProgressBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

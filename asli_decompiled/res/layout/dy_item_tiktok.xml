@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <cn.jzvd.JzvdStd android:id="@id/videoplayer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zhpan.bannerview.BannerViewPager android:id="@id/bannerviewpager" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:bvp_auto_play="false" app:bvp_indicator_checked_color="@color/color_F85959" app:bvp_indicator_gravity="center" app:bvp_indicator_normal_color="@color/normal_color" />
+    <LinearLayout android:layout_gravity="bottom|center|left" android:orientation="vertical" android:id="@id/ll_text_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:layout_marginRight="@dimen/dp_12" android:layout_marginBottom="@dimen/dp_40">
+        <TextView android:textSize="@dimen/sp_15" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/tv_group" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/tv_dy_attention" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:maxLines="5" android:minLines="2" android:lineSpacingExtra="3.0dip" />
+        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/video_title_color" android:id="@id/tv_dy__times" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_2" android:layout_marginTop="5.0dip" android:singleLine="true" android:drawablePadding="5.0dip" android:marqueeRepeatLimit="marquee_forever" />
+    </LinearLayout>
+</FrameLayout>

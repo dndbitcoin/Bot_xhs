@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xzdyks.downloader.view.VerticalViewPager android:id="@id/vvp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="left" android:id="@id/iv_back_dy" android:layout_width="@dimen/dp_23" android:layout_height="@dimen/dp_23" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_40" android:src="@drawable/backpic" android:layout_alignParentLeft="true" />
+    <ImageView android:layout_gravity="right" android:id="@id/iv_share_dy" android:layout_width="@dimen/dp_23" android:layout_height="@dimen/dp_23" android:layout_marginTop="@dimen/dp_40" android:layout_marginRight="@dimen/dp_15" android:src="@drawable/share" android:layout_alignParentRight="true" />
+    <com.xzdyks.downloader.mob.AdFrameLayout android:layout_gravity="bottom" android:id="@id/ad_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</FrameLayout>

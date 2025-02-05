@@ -1,0 +1,836 @@
+.class public Lcom/hjq/gson/factory/element/MapTypeAdapter;
+.super LU3/u;
+.source "MapTypeAdapter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "LU3/u<",
+        "Ljava/util/Map<",
+        "TK;TV;>;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final mComplexMapKeySerialization:Z
+
+.field private final mConstructor:LW3/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "LW3/h<",
+            "+",
+            "Ljava/util/Map<",
+            "TK;TV;>;>;"
+        }
+    .end annotation
+.end field
+
+.field private mFieldName:Ljava/lang/String;
+
+.field private final mKeyTypeAdapter:LU3/u;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "LU3/u<",
+            "TK;>;"
+        }
+    .end annotation
+.end field
+
+.field private mTypeToken:Lcom/google/gson/reflect/TypeToken;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/gson/reflect/TypeToken<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+.field private final mValueTypeAdapter:LU3/u;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "LU3/u<",
+            "TV;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(LU3/e;Ljava/lang/reflect/Type;LU3/u;Ljava/lang/reflect/Type;LU3/u;LW3/h;Z)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "LU3/e;",
+            "Ljava/lang/reflect/Type;",
+            "LU3/u<",
+            "TK;>;",
+            "Ljava/lang/reflect/Type;",
+            "LU3/u<",
+            "TV;>;",
+            "LW3/h<",
+            "+",
+            "Ljava/util/Map<",
+            "TK;TV;>;>;Z)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, LU3/u;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Lcom/hjq/gson/factory/element/TypeAdapterRuntimeTypeWrapper;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p1, p3, p2}, Lcom/hjq/gson/factory/element/TypeAdapterRuntimeTypeWrapper;-><init>(LU3/e;LU3/u;Ljava/lang/reflect/Type;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mKeyTypeAdapter:LU3/u;
+
+    .line 10
+    .line 11
+    new-instance p2, Lcom/hjq/gson/factory/element/TypeAdapterRuntimeTypeWrapper;
+
+    .line 12
+    .line 13
+    invoke-direct {p2, p1, p5, p4}, Lcom/hjq/gson/factory/element/TypeAdapterRuntimeTypeWrapper;-><init>(LU3/e;LU3/u;Ljava/lang/reflect/Type;)V
+
+    .line 14
+    .line 15
+    .line 16
+    iput-object p2, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mValueTypeAdapter:LU3/u;
+
+    .line 17
+    .line 18
+    iput-object p6, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mConstructor:LW3/h;
+
+    .line 19
+    .line 20
+    iput-boolean p7, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mComplexMapKeySerialization:Z
+
+    .line 21
+    .line 22
+    return-void
+.end method
+
+.method private keyToString(LU3/k;)Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p1}, LU3/k;->p()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_3
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, LU3/k;->k()LU3/n;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p1
+
+    .line 11
+    invoke-virtual {p1}, LU3/n;->A()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    invoke-virtual {p1}, LU3/n;->v()Ljava/lang/Number;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object p1
+
+    .line 21
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object p1
+
+    .line 25
+    return-object p1
+
+    .line 26
+    :cond_0
+    invoke-virtual {p1}, LU3/n;->y()Z
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    if-eqz v0, :cond_1
+
+    .line 31
+    .line 32
+    invoke-virtual {p1}, LU3/n;->r()Z
+
+    .line 33
+    .line 34
+    .line 35
+    move-result p1
+
+    .line 36
+    invoke-static {p1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object p1
+
+    .line 40
+    return-object p1
+
+    .line 41
+    :cond_1
+    invoke-virtual {p1}, LU3/n;->B()Z
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v0
+
+    .line 45
+    if-eqz v0, :cond_2
+
+    .line 46
+    .line 47
+    invoke-virtual {p1}, LU3/n;->w()Ljava/lang/String;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object p1
+
+    .line 51
+    return-object p1
+
+    .line 52
+    :cond_2
+    new-instance p1, Ljava/lang/AssertionError;
+
+    .line 53
+    .line 54
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+
+    .line 55
+    .line 56
+    .line 57
+    throw p1
+
+    .line 58
+    :cond_3
+    invoke-virtual {p1}, LU3/k;->m()Z
+
+    .line 59
+    .line 60
+    .line 61
+    move-result p1
+
+    .line 62
+    if-eqz p1, :cond_4
+
+    .line 63
+    .line 64
+    const-string p1, "null"
+
+    .line 65
+    .line 66
+    return-object p1
+
+    .line 67
+    :cond_4
+    new-instance p1, Ljava/lang/AssertionError;
+
+    .line 68
+    .line 69
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+
+    .line 70
+    .line 71
+    .line 72
+    throw p1
+.end method
+
+
+# virtual methods
+.method public bridge synthetic read(LZ3/a;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/hjq/gson/factory/element/MapTypeAdapter;->read(LZ3/a;)Ljava/util/Map;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public read(LZ3/a;)Ljava/util/Map;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "LZ3/a;",
+            ")",
+            "Ljava/util/Map<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .line 2
+    invoke-virtual {p1}, LZ3/a;->P()LZ3/b;
+
+    move-result-object v0
+
+    .line 3
+    iget-object v1, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mConstructor:LW3/h;
+
+    invoke-interface {v1}, LW3/h;->construct()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map;
+
+    .line 4
+    sget-object v2, LZ3/b;->x:LZ3/b;
+
+    if-ne v0, v2, :cond_0
+
+    .line 5
+    invoke-virtual {p1}, LZ3/a;->I()V
+
+    return-object v1
+
+    .line 6
+    :cond_0
+    sget-object v2, LZ3/b;->p:LZ3/b;
+
+    if-ne v0, v2, :cond_4
+
+    .line 7
+    invoke-virtual {p1}, LZ3/a;->a()V
+
+    .line 8
+    :cond_1
+    :goto_0
+    invoke-virtual {p1}, LZ3/a;->v()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 9
+    invoke-virtual {p1}, LZ3/a;->P()LZ3/b;
+
+    move-result-object v2
+
+    sget-object v3, LZ3/b;->p:LZ3/b;
+
+    if-ne v2, v3, :cond_2
+
+    .line 10
+    invoke-virtual {p1}, LZ3/a;->a()V
+
+    .line 11
+    iget-object v2, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mKeyTypeAdapter:LU3/u;
+
+    invoke-virtual {v2, p1}, LU3/u;->read(LZ3/a;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 12
+    iget-object v3, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mValueTypeAdapter:LU3/u;
+
+    invoke-virtual {v3, p1}, LU3/u;->read(LZ3/a;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    .line 13
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 14
+    invoke-virtual {p1}, LZ3/a;->i()V
+
+    goto :goto_0
+
+    .line 15
+    :cond_2
+    invoke-virtual {p1}, LZ3/a;->x0()V
+
+    .line 16
+    invoke-static {}, Lcom/hjq/gson/factory/GsonFactory;->getParseExceptionCallback()Lcom/hjq/gson/factory/ParseExceptionCallback;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    .line 17
+    iget-object v3, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mTypeToken:Lcom/google/gson/reflect/TypeToken;
+
+    iget-object v4, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mFieldName:Ljava/lang/String;
+
+    invoke-interface {v2, v3, v4, v0}, Lcom/hjq/gson/factory/ParseExceptionCallback;->onParseObjectException(Lcom/google/gson/reflect/TypeToken;Ljava/lang/String;LZ3/b;)V
+
+    goto :goto_0
+
+    .line 18
+    :cond_3
+    invoke-virtual {p1}, LZ3/a;->i()V
+
+    goto :goto_3
+
+    .line 19
+    :cond_4
+    sget-object v2, LZ3/b;->r:LZ3/b;
+
+    if-ne v0, v2, :cond_7
+
+    .line 20
+    invoke-virtual {p1}, LZ3/a;->d()V
+
+    .line 21
+    :cond_5
+    :goto_1
+    invoke-virtual {p1}, LZ3/a;->v()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 22
+    sget-object v0, LW3/e;->a:LW3/e;
+
+    invoke-virtual {v0, p1}, LW3/e;->a(LZ3/a;)V
+
+    const/4 v0, 0x0
+
+    .line 23
+    :try_start_0
+    iget-object v2, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mKeyTypeAdapter:LU3/u;
+
+    invoke-virtual {v2, p1}, LU3/u;->read(LZ3/a;)Ljava/lang/Object;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 24
+    :try_start_1
+    invoke-virtual {p1}, LZ3/a;->P()LZ3/b;
+
+    move-result-object v0
+
+    .line 25
+    iget-object v3, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mValueTypeAdapter:LU3/u;
+
+    invoke-virtual {v3, p1}, LU3/u;->read(LZ3/a;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    .line 26
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v3
+
+    move-object v6, v2
+
+    move-object v2, v0
+
+    move-object v0, v6
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v3
+
+    move-object v2, v0
+
+    .line 27
+    :goto_2
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
+
+    .line 28
+    invoke-static {}, Lcom/hjq/gson/factory/GsonFactory;->getParseExceptionCallback()Lcom/hjq/gson/factory/ParseExceptionCallback;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_5
+
+    .line 29
+    iget-object v4, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mTypeToken:Lcom/google/gson/reflect/TypeToken;
+
+    iget-object v5, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mFieldName:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v4, v5, v0, v2}, Lcom/hjq/gson/factory/ParseExceptionCallback;->onParseMapItemException(Lcom/google/gson/reflect/TypeToken;Ljava/lang/String;Ljava/lang/String;LZ3/b;)V
+
+    goto :goto_1
+
+    .line 30
+    :cond_6
+    invoke-virtual {p1}, LZ3/a;->j()V
+
+    goto :goto_3
+
+    .line 31
+    :cond_7
+    invoke-virtual {p1}, LZ3/a;->x0()V
+
+    .line 32
+    invoke-static {}, Lcom/hjq/gson/factory/GsonFactory;->getParseExceptionCallback()Lcom/hjq/gson/factory/ParseExceptionCallback;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_8
+
+    .line 33
+    iget-object v2, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mTypeToken:Lcom/google/gson/reflect/TypeToken;
+
+    iget-object v3, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mFieldName:Ljava/lang/String;
+
+    invoke-interface {p1, v2, v3, v0}, Lcom/hjq/gson/factory/ParseExceptionCallback;->onParseObjectException(Lcom/google/gson/reflect/TypeToken;Ljava/lang/String;LZ3/b;)V
+
+    :cond_8
+    :goto_3
+    return-object v1
+.end method
+
+.method public setReflectiveType(Lcom/google/gson/reflect/TypeToken;Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/gson/reflect/TypeToken<",
+            "*>;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mTypeToken:Lcom/google/gson/reflect/TypeToken;
+
+    .line 2
+    .line 3
+    iput-object p2, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mFieldName:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public bridge synthetic write(LZ3/c;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p2, Ljava/util/Map;
+
+    invoke-virtual {p0, p1, p2}, Lcom/hjq/gson/factory/element/MapTypeAdapter;->write(LZ3/c;Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public write(LZ3/c;Ljava/util/Map;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "LZ3/c;",
+            "Ljava/util/Map<",
+            "TK;TV;>;)V"
+        }
+    .end annotation
+
+    if-nez p2, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, LZ3/c;->A()LZ3/c;
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget-boolean v0, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mComplexMapKeySerialization:Z
+
+    if-nez v0, :cond_2
+
+    .line 4
+    invoke-virtual {p1}, LZ3/c;->g()LZ3/c;
+
+    .line 5
+    invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    .line 6
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, LZ3/c;->w(Ljava/lang/String;)LZ3/c;
+
+    .line 7
+    iget-object v1, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mValueTypeAdapter:LU3/u;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, v0}, LU3/u;->write(LZ3/c;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    invoke-virtual {p1}, LZ3/c;->j()LZ3/c;
+
+    return-void
+
+    .line 9
+    :cond_2
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p2}, Ljava/util/Map;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 10
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-interface {p2}, Ljava/util/Map;->size()I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 11
+    invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    :goto_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/Map$Entry;
+
+    .line 12
+    iget-object v5, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mKeyTypeAdapter:LU3/u;
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, LU3/u;->toJsonTree(Ljava/lang/Object;)LU3/k;
+
+    move-result-object v5
+
+    .line 13
+    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 14
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 15
+    invoke-virtual {v5}, LU3/k;->l()Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    invoke-virtual {v5}, LU3/k;->o()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v4, 0x0
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    const/4 v4, 0x1
+
+    :goto_3
+    or-int/2addr v3, v4
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz v3, :cond_7
+
+    .line 16
+    invoke-virtual {p1}, LZ3/c;->f()LZ3/c;
+
+    .line 17
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    :goto_4
+    if-ge v2, p2, :cond_6
+
+    .line 18
+    invoke-virtual {p1}, LZ3/c;->f()LZ3/c;
+
+    .line 19
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, LU3/k;
+
+    invoke-static {v3, p1}, LW3/l;->b(LU3/k;LZ3/c;)V
+
+    .line 20
+    iget-object v3, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mValueTypeAdapter:LU3/u;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v3, p1, v4}, LU3/u;->write(LZ3/c;Ljava/lang/Object;)V
+
+    .line 21
+    invoke-virtual {p1}, LZ3/c;->i()LZ3/c;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_4
+
+    .line 22
+    :cond_6
+    invoke-virtual {p1}, LZ3/c;->i()LZ3/c;
+
+    goto :goto_6
+
+    .line 23
+    :cond_7
+    invoke-virtual {p1}, LZ3/c;->g()LZ3/c;
+
+    .line 24
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    :goto_5
+    if-ge v2, p2, :cond_8
+
+    .line 25
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, LU3/k;
+
+    .line 26
+    invoke-direct {p0, v3}, Lcom/hjq/gson/factory/element/MapTypeAdapter;->keyToString(LU3/k;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, LZ3/c;->w(Ljava/lang/String;)LZ3/c;
+
+    .line 27
+    iget-object v3, p0, Lcom/hjq/gson/factory/element/MapTypeAdapter;->mValueTypeAdapter:LU3/u;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v3, p1, v4}, LU3/u;->write(LZ3/c;Ljava/lang/Object;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_5
+
+    .line 28
+    :cond_8
+    invoke-virtual {p1}, LZ3/c;->j()LZ3/c;
+
+    :goto_6
+    return-void
+.end method
